@@ -15,16 +15,6 @@ Es bietet ein **Web-Dashboard** mit Auto-Refresh und kann **Discord-Benachrichti
 
 ---
 
-## 📷 Screenshots
-
-### Dashboard mit Alerts
-![Dashboard Screenshot](docs/dashboard.png)
-
-### Discord-Alert Beispiel
-![Discord Alert Screenshot](docs/discord-alert.png)
-
----
-
 ## 📁 Projektstruktur
 ```
 .
