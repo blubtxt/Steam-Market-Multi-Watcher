@@ -9,20 +9,9 @@ Es bietet ein **Web-Dashboard** mit Auto-Refresh und kann **Discord-Benachrichti
 
 ## ✨ Features
 - Multi-Item Tracking über `items.json`
-- Web-Dashboard (`index_multi.php`) mit Auto-Refresh
+- Web-Dashboard (`index.php`) mit Auto-Refresh
 - Discord-Alerts direkt aus dem Browser oder via CLI-Watcher
 - Datei-Cache pro Item; robustes Preis-Parsing
-
----
-
-## 📁 Projektstruktur
-```
-.
-├─ index_multi.php       # Web-UI (inkl. Eingabe für Discord Webhook & Alerts)
-├─ fetch_multi.php       # Server-seitiger Fetcher + Cache (pro Item)
-├─ items.json            # Item-Liste mit Zielpreisen (Beispiele enthalten)
-└─ watcher_cli.php       # (optional) CLI-Watcher mit Discord-Alerts
-```
 
 ---
 
@@ -50,7 +39,7 @@ Bearbeite `items.json` und trage die exakten Market-Namen und Zielpreise ein:
 ```bash
 php -S 0.0.0.0:8080
 ```
-Dann im Browser: `http://localhost:8080/index_multi.php`
+Dann im Browser: `http://localhost:8080/index.php`
 
 ### 4) Discord Alerts aktivieren
 - Trage deine Discord Webhook URL im Dashboard ein
