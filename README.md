@@ -2,32 +2,32 @@
 
 # Steam Market Multi Watcher (PHP)
 
-Ein leichtgewichtiges Tool, um **mehrere CS2-Items (z. B. Messer)** am **Steam Community Market** zu beobachten.  
-Es bietet ein **Web-Dashboard** mit Auto-Refresh und kann **Discord-Benachrichtigungen** senden, sobald der Zielpreis erreicht oder unterschritten wird.
+A lightweight tool to **monitor multiple CS2 items (e.g., knives)** on the **Steam Community Market**.  
+It provides a **web dashboard** with auto-refresh and can send **Discord notifications** when the target price is reached or undercut.
 
 ---
 
 ## ✨ Features
-- Multi-Item Tracking über `items.json`
-- Web-Dashboard (`index.php`) mit Auto-Refresh
-- Discord-Alerts direkt aus dem Browser oder via CLI-Watcher
-- Datei-Cache pro Item; robustes Preis-Parsing
+- Multi-item tracking via `items.json`
+- Web dashboard (`index.php`) with auto-refresh
+- Discord alerts directly from the browser or via CLI watcher
+- File cache per item; robust price parsing
 
 ---
 
-## 🚀 Installation & Nutzung
+## 🚀 Installation & Usage
 
-### Voraussetzungen
-- PHP 7.4+ (empfohlen 8.x) mit `ext-curl` und `ext-json`
+### Requirements
+- PHP 7.4+ (recommended 8.x) with `ext-curl` and `ext-json`
 
-### 1) Repository klonen
+### 1) Clone the repository
 ```bash
-git clone https://github.com/<dein-user>/<dein-repo>.git
-cd <dein-repo>
+git clone https://github.com/<your-user>/<your-repo>.git
+cd <your-repo>
 ```
 
-### 2) Items definieren
-Bearbeite `items.json` und trage die exakten Market-Namen und Zielpreise ein:
+### 2) Define items
+Edit `items.json` and enter the exact market names and target prices:
 ```json
 [
   { "name": "★ M9 Bayonet | Doppler (Factory New)", "target": 300.0 },
@@ -35,19 +35,19 @@ Bearbeite `items.json` und trage die exakten Market-Namen und Zielpreise ein:
 ]
 ```
 
-### 3) Web-Dashboard starten
+### 3) Start the web dashboard
 ```bash
 php -S 0.0.0.0:8080
 ```
-Dann im Browser: `http://localhost:8080/index.php`
+Then open in browser: `http://localhost:8080/index.php`
 
-### 4) Discord Alerts aktivieren
-- Trage deine Discord Webhook URL im Dashboard ein
-- Aktiviere Alerts und teste mit "Test senden"
+### 4) Enable Discord alerts
+- Enter your Discord webhook URL in the dashboard
+- Activate alerts and test with **Send Test**
 
 ---
 
-## 🔔 CLI-Watcher (optional)
+## 🔔 CLI Watcher (optional)
 ```bash
 export DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/..."
 php watcher_cli.php
@@ -55,19 +55,19 @@ php watcher_cli.php
 
 ---
 
-## ⚠️ Hinweise
-- Nutzt undokumentierte Steam-Endpunkte (`priceoverview`), die rate-limited sind.
-- Bitte moderates Polling und Cache verwenden.
+## ⚠️ Notes
+- Uses undocumented Steam endpoints (`priceoverview`), which are rate-limited.
+- Please use moderate polling and caching.
 
 ---
 
-## 🧩 Erweiterungen
-- Discord-Embeds
-- Cool-down pro Item
-- Pro Item eigener Webhook
-- Docker/Compose für 24/7-Betrieb
+## 🧩 Extensions
+- Discord embeds
+- Cool-down per item
+- Per-item webhook
+- Docker/Compose for 24/7 operation
 
 ---
 
-## 📝 Lizenz
+## 📝 License
 MIT License
